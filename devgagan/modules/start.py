@@ -14,7 +14,7 @@ async def start(client, message):
         {"$set": {"premium": True, "premium_expiry": expiry}},
         upsert=True
     )
-    await message.reply_text("🎉 1 Month Premium Activated Successfully ✅")
+    await message.reply_text("🎉 5 Month Premium Activated Successfully ✅")
 
 
 # ---------------------------------------------------
@@ -211,7 +211,7 @@ async def terms(client, message):
 @app.on_message(filters.command("plan") & filters.private)
 async def plan(client, message):
     plan_text = (
-        "> 💰 **Premium Price**:\n\n Starting from $2 or 200 INR accepted via **__Amazon Gift Card__** (terms and conditions apply).\n"
+        "> 💰 **Premium Price**:\n\n Starting from 2 INR accepted via **__Amazon Gift Card__** (terms and conditions apply).\n"
         "📥 **Download Limit**: Users can download up to 100,000 files in a single batch command.\n"
         "🛑 **Batch**: You will get two modes /bulk and /batch.\n"
         "   - Users are advised to wait for the process to automatically cancel before proceeding with any downloads or uploads.\n\n"
@@ -230,7 +230,7 @@ async def plan(client, message):
 @app.on_callback_query(filters.regex("see_plan"))
 async def see_plan(client, callback_query):
     plan_text = (
-        "> 💰**Premium Price**\n\n Starting from $2 or 200 INR accepted via **__Amazon Gift Card__** (terms and conditions apply).\n"
+        "> 💰**Premium Price**\n\n Starting from 2 INR accepted via **__Amazon Gift Card__** (terms and conditions apply).\n"
         "📥 **Download Limit**: Users can download up to 100,000 files in a single batch command.\n"
         "🛑 **Batch**: You will get two modes /bulk and /batch.\n"
         "   - Users are advised to wait for the process to automatically cancel before proceeding with any downloads or uploads.\n\n"
@@ -258,7 +258,7 @@ async def see_terms(client, callback_query):
     buttons = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("📋 See Plans", callback_data="see_plan")],
-            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/ytbr_67")],
+            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/Mr_Abhijit_1")],
         ]
     )
     await callback_query.message.edit_text(terms_text, reply_markup=buttons)
